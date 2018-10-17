@@ -1,7 +1,25 @@
-Hogwarts Sandbox
-========
-
 A Hogwarts (Harry Potter) open sandbox game made in Unity. NOT FINISHED
+
+Good news! An official Harry potter RPG game is in development: 
+https://download.void.cat/20037112355c696ce37131b173d245f8489ce8d2
+
+https://my.mixtape.moe/scyeev.mp4
+
+## Table of Contents
+- [Video Demo](#hogwarts-sandbox)
+- [Binary download](#binary-download)
+- [Development requirements](#development-requirements)
+- [Development setup](#development-setup)
+- [Working features](#working-features)
+- [¿Why development is so slow?](#why-development-is-so-slow)
+- [Hotkeys](#hotkeys)
+- [Broomstick hotkeys](#broomstick-hotkeys)
+- [ToDo](#todo)
+- [Credits](#credits)
+- [Special Thanks](#special-thanks)
+- [Copyright Notice](#copyright-notice)
+
+## Video Demo
 
 [![OpenHogwarts demo](https://raw.githubusercontent.com/OpenHogwarts/hogwarts/master/Screenshots/video_preview.jpg)](https://www.youtube.com/watch?v=Kra8mhuHzx4 "OpenHogwarts demo")
 ![hogwarts](https://raw.githubusercontent.com/OpenHogwarts/hogwarts/master/Screenshots/screen1.jpg)
@@ -10,36 +28,41 @@ A Hogwarts (Harry Potter) open sandbox game made in Unity. NOT FINISHED
 ![hogwars4](https://raw.githubusercontent.com/OpenHogwarts/hogwarts/master/Screenshots/screen4.jpg)
 ![hogwars5](https://raw.githubusercontent.com/OpenHogwarts/hogwarts/master/Screenshots/screen5.jpg)
 
-Requirements
+## Binary download
 -------------
-- Unity >= 5.4.2
 
-Setup
+You can download the latest compiled binary here: https://github.com/OpenHogwarts/hogwarts/releases
+
+## Development requirements
+-------------
+- Unity >= [ProjectVersion.txt](https://github.com/OpenHogwarts/hogwarts/blob/master/ProjectSettings/ProjectVersion.txt)
+
+## Development setup
 -------------
 [![Analytics](https://ga-beacon.appspot.com/UA-17476024-7/hogwarts/readme?pixel)](https://github.com/OpenHogwarts/hogwarts)
 
 - Clone/Download this repo (https://github.com/OpenHogwarts/hogwarts/archive/master.zip)
 - Open the downloaded folder in Unity (File -> Open Project)
 - In Unity project's folders double click MainMenu (Assets -> Scenes -> MainMenu)
-- Hit the start button from Game tab. Inside the game, click create a New Character, set the name and click on "Entrar".
+- Hit the start button from Game tab. Inside the game, click create a New Character, set the name and click on "Enter".
 
 
-Working features
+## Working features
 -------------
 - Multiplayer
 - Chat
 - Inventory
-- NPCs (Agressives & sellers) + patrols
+- NPCs (Agressives, sellers, questers, talkers) + patrols
 - Spells combat
 - Flying Broomstick
 - Quests
 
-¿Why development is so slow?
+## ¿Why development is so slow?
 ------------------
 Because everyone wants to play, but no one wants to code/design/mod/help.
 
 
-Hotkeys
+## Hotkeys
 ------------------
 Since they may change, always check https://github.com/OpenHogwarts/hogwarts/blob/master/Assets/Scripts/Player/PlayerHotkeys.cs to ensure which are the latest assigned for each action.
 - WASD: Player control
@@ -55,17 +78,17 @@ Since they may change, always check https://github.com/OpenHogwarts/hogwarts/blo
 - Left mouse: Select target
 - 1, 2, 3.. keys: Spell cast
 
-Broomstick hotkeys
+## Broomstick hotkeys
 ------------------
 - WASD: Basic control
 - Right mouse: 3D Direction control
 
-ToDo
+## ToDo
 ------
 Check the wiki https://github.com/OpenHogwarts/hogwarts/wiki/ToDo
 
 
-Credits
+## Credits
 -------------
 
 - Hogwarts model: Dani Moreno (danimoreno3d.com)
@@ -76,12 +99,13 @@ Credits
 - Music: Ektorkrom (http://www.goear.com/search/foxkrom)
 - Scenario & UI (mostly): Vancete
 - Backend/Programming: Kardall, Vancete, Seyji, etc.. (https://github.com/OpenHogwarts/hogwarts/graphs/contributors)
+- Hagrid's Hut model: Ecelon
 
-Special Thanks
+## Special Thanks
 -------------
 - Bruce (iBoxDB creator) for the technical support given
 - Rusfighter for finding the OnMouse events - NPC bug
 
-Copyright Notice
+## Copyright Notice
 -------------
 All trademarks or registered trademarks mentioned are property of their respective owners. Unless identified with the designation "COPY FREE", the contents of this project are copyright reserved by its owners.

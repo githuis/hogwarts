@@ -108,10 +108,10 @@ public class NPC : Photon.MonoBehaviour
 	
 	public void Start()
 	{
-		if (Id == 0) {
-			throw new Exception ("Id not assigned");
+		if (Id == 0 || namePlate == null) {
+			throw new Exception ("Id or nameplate not assigned");
 		}
-		data = NPC.get (Id);
+		data = NPC.get(Id);
 		Color color;
 
 		try {
@@ -127,8 +127,8 @@ public class NPC : Photon.MonoBehaviour
 		} else {
 			color = NamePlate.COLOR_NORMAL;
 		}
-		namePlate.setName (data.name, color);
-		namePlate.setLevel (data.level);
+		namePlate.setName(data.name, color);
+		namePlate.setLevel(data.level);
         originalPosition = transform.position;
 
         // all NPCs start disabled, player will automatically, enable the nearest ones.
@@ -146,7 +146,7 @@ public class NPC : Photon.MonoBehaviour
         }
     }
 
-private void Update()
+    private void Update()
 	{
         if (isDead)
         {
@@ -473,11 +473,26 @@ private void Update()
 	}
 
 	public void OnMouseDown() {
-        setSelected (true);
+        setSelected(true);
+
+        if (!isInInteractionRange) {
+            // alert player somehow?
+            Debug.Log("[User Cannot See This] Target Too Far Away To Interact With.");
+            return;
+        }
 
         if (!data.isAggresive) {
             QuestManager.Instance.sendAction(data.id, Task.ActorType.NPC, Task.ActionType.Talk, 0, data.template);
         }
+
+        try {
+            OnClick();
+        } catch (Exception) {
+        }
+    }
+
+    public virtual void OnClick() {
+
     }
 
 	public void OnMouseOver () {
@@ -488,6 +503,7 @@ private void Update()
         } else if (data.isAggresive) {
 			texture = GameCursor.Attack;
 		} else {
+
             switch (data.subRace)
             {
                 case NPCData.creatureSubRace.Seller:
@@ -495,6 +511,9 @@ private void Update()
                     break;
                 case NPCData.creatureSubRace.Quest:
                     texture = GameCursor.QuestAvailable;
+                    break;
+                case NPCData.creatureSubRace.Talker:
+                    texture = GameCursor.Talk;
                     break;
             }
         }
